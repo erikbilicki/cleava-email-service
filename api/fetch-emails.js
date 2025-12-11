@@ -21,7 +21,11 @@ module.exports = async (req, res) => {
         port: 993,
         tls: true,
         authTimeout: 5000,
-        connTimeout: 5000
+        connTimeout: 5000,
+        tlsOptions: { 
+          rejectUnauthorized: false,
+          servername: 'imap.gmail.com'
+        }
       }
     });
     
@@ -35,7 +39,6 @@ module.exports = async (req, res) => {
     
     const messages = await connection.search(searchCriteria, fetchOptions);
     
-    // Get only the most recent emails
     const recent = messages.slice(-limit).reverse();
     
     const emails = recent.map(msg => {

@@ -1,0 +1,10 @@
+{
+  "name": "cleava-email-service",
+  "version": "1.0.0",
+  "description": "IMAP/SMTP email service for Cleava",
+  "dependencies": {
+    "imap-simple": "^5.1.0",
+    "mailparser": "^3.6.5",
+    "nodemailer": "^6.9.7"
+  }
+}

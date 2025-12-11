@@ -27,17 +27,18 @@ module.exports = async (req, res) => {
     return res.status(400).json({ error: 'Email and password required' });
   }
   
-  const config = {
-    imap: {
-      user: email,
-      password: password,
-      host: host || 'imap.gmail.com',
-      port: port || 993,
-      tls: true,
-      authTimeout: 10000,
-      tlsOptions: { rejectUnauthorized: false }
-    }
-  };
+const config = {
+  imap: {
+    user: email,
+    password: password,
+    host: host || 'imap.gmail.com',
+    port: port || 993,
+    tls: true,
+    authTimeout: 5000,
+    connTimeout: 5000,
+    tlsOptions: { rejectUnauthorized: false }
+  }
+};
   
   let connection;
   

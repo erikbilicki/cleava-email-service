@@ -1,0 +1,25 @@
+{
+  "functions": {
+    "api/fetch-emails.js": {
+      "maxDuration": 30
+    },
+    "api/send-email.js": {
+      "maxDuration": 10
+    }
+  }
+}
+```
+4. Click **Commit changes**
+
+---
+
+**Step 6: Verify your structure**
+
+Your repo should now show:
+```
+api/
+  fetch-emails.js
+  send-email.js
+package.json
+vercel.json
+README.md

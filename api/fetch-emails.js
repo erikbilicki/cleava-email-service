@@ -16,10 +16,10 @@ module.exports = async (req, res) => {
   }
   
   // Verify API key
-  const apiKey = req.headers.authorization?.replace('Bearer ', '');
-  if (apiKey !== process.env.API_KEY) {
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
+  // const apiKey = req.headers.authorization?.replace('Bearer ', '');
+  // if (apiKey !== process.env.API_KEY) {
+  //  return res.status(401).json({ error: 'Unauthorized' });
+ // }
   
   const { email, password, host, port, folder, limit, since } = req.body;
   

@@ -67,7 +67,7 @@ const config = {
         const dateB = new Date(b.attributes.date);
         return dateB - dateA;
       })
-      .slice(0, limit || 50);
+      .slice(0, limit || 10);
     
     const emails = [];
     
